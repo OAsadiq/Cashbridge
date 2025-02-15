@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashBridge Contact Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/CB-logo.png" alt="Company Logo">
+        </div>
+    
+        <!-- Hamburger Menu Icon -->
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
+    
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li class="menu-auth-buttons">
+                    <button class="login">Login</button>
+                    <button class="signup">Sign Up</button>
+                </li>
+            </ul>
+        </nav>
+    
+        <!-- Desktop Auth Buttons (Hidden on Mobile) -->
+        <div class="auth-buttons">
+            <button class="login">Login</button>
+            <button class="signup">Sign Up</button>
+        </div>
+    </header>    
+
+    <!-- Features -->
+    <section class="contact">
+        <div class="contact-container">
+            <h2>Get in touch with Us</h2>
+            <p>We’d love to hear from you! Whether you have questions, feedback, or need assistance, our team is here to help.</p>
+    
+            <form class="contact-form">
+                <div class="form-group">
+                    <div class="input-field">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" placeholder="Enter first name">
+                    </div>
+                    <div class="input-field">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" placeholder="Enter last name">
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="johndoe@gmail.com">
+                    </div>
+                    <div class="input-field">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" placeholder="+234">
+                    </div>
+                </div>
+    
+                <div class="message-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Enter message here"></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="/img/CB-logo-2.png" alt="Logo">
+        </div>
+
+        <!-- Border Line -->
+        <div class="footer-line"></div>
+
+        <!-- Footer Content -->
+        <div class="footer-container">
+            <!-- Contact Us -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <span>
+                    <img src="img/call-svgrepo-com.svg" alt="">
+                    <p>+234(0) 802 715 3333, +234(0) 814 677 0286</p>
+                </span>
+                <span>
+                    <img src="img/email-envelope-letter-mail-message-svgrepo-com.svg" alt="">
+                    <p>info@cashbridge.com</p>
+                </span>
+                <div class="social-icons">
+                    <a href="#">
+                        <img src="img/instagram-svgrepo-com.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/facebook-svgrepo-com.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/twitter-svgrepo-com.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Page</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Address -->
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Suite 210 Royal Plaza Opposite</p>
+                <p>Building Materials, Keffi-Road</p>
+                <p>Maraba, FCT, Abuja</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

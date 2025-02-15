@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4ece7;
+    color: black;
+    padding: 15px 50px;
+    margin: 15px;
+}
+
+/* Logo */
+.navbar .logo img {
+    width: 80px;
+}
+
+/* Default Navigation Links */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.navbar nav ul li a.active {
+    color: #9b1c31;
+    font-weight: bold;
+    border-bottom: 2px solid #9b1c31;
+}
+
+.nav-links ul li a:hover {
+    color: #9b1c31;
+}
+
+/* Auth Buttons */
+.auth-buttons button {
+    padding: 8px 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menu-auth-buttons {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Desktop Button Styling */
+.login {
+    background: transparent;
+    color: #9b1c31;
+    border: 1px solid #9b1c31;
+    border-radius: 50px;
+}
+
+.signup {
+    background: #9b1c31;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+.login:hover {
+    background: #9b1c31;
+    color: white;
+    border: none;
+}
+
+.signup:hover {
+    background: transparent;
+    color: #9b1c31;
+    border: 1px solid #9b1c31;
+    border-radius: 50px;
+}
+
+/* Mobile & Tablet View */
+.menu-toggle {
+    display: none; /* Hidden on Desktop */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #f4ece7;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        padding: 10px 0;
+    }
+
+    /* Show Menu Auth Buttons on Mobile */
+    .menu-auth-buttons {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .menu-auth-buttons button {
+        width: 80%;
+        margin: 5px auto;
+        padding: 10px;
+    }
+
+    /* Show Hamburger Icon */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Show Navbar when Active */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Hide Desktop Auth Buttons */
+    .auth-buttons {
+        display: none;
+    }
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.about-section img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section img {
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    background-image: url('./img/CB-background3.png');
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.mission-vision h2 {
+    color: #9b1c31;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission-vision p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mission {
+    margin-bottom: 5%;
+}
+
+/* Leadership Section */
+.leadership {
+    text-align: left;
+    padding: 50px 10%;
+}
+
+.leadership h2 {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.leader-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leader-card {
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.leader-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.leader-info {
+    margin-top: 10px;
+}
+
+.leader-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.leader-title {
+    font-size: 14px;
+    color: #555;
+}
+
+.linkedin-icon {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.linkedin-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+.linkedin-icon svg:hover {
+    stroke: #0077b5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leader-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #9b1c31;
+    color: white;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+/* Logo Section */
+.footer-logo {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+
+.footer-logo img {
+    width: 80px;
+}
+
+/* Horizontal Border Line */
+.footer-line {
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.5;
+    margin-block: 15px;
+    margin-left: 60px;
+}
+
+/* Footer Content */
+.footer-container {
+    display: flex;
+    margin-left: 60px;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 330px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    line-height: 1.5;
+}
+
+.footer-section span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.footer-section span img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.footer-section span p {
+    font-size: 15px;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin-right: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
