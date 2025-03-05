@@ -5,7 +5,6 @@
     font-family: Helvetica, sans-serif;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,7 +12,9 @@
     background: #f4ece7;
     color: black;
     padding: 15px 50px;
-    margin: 15px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 /* Logo */
@@ -91,7 +92,7 @@
 
 /* Mobile & Tablet View */
 .menu-toggle {
-    display: none; /* Hidden on Desktop */
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
@@ -100,8 +101,13 @@
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 30px;
+        margin: 0px;
+    }
+
     .nav-links {
-        display: none; /* Hidden by default */
+        display: none;
         position: absolute;
         top: 60px;
         left: 0;
@@ -110,6 +116,10 @@
         text-align: center;
         padding: 10px 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: block;
     }
 
     .nav-links ul {
@@ -122,7 +132,6 @@
         padding: 10px 0;
     }
 
-    /* Show Menu Auth Buttons on Mobile */
     .menu-auth-buttons {
         display: block;
         margin-top: 10px;
@@ -134,12 +143,11 @@
         padding: 10px;
     }
 
-    /* Show Hamburger Icon */
     .menu-toggle {
-        display: block;
+        display: flex;
+        color: #9b1c31;
     }
 
-    /* Show Navbar when Active */
     .nav-links.active {
         display: block;
     }
@@ -171,7 +179,7 @@
     }
 
     .about-section img {
-        width: 50%;
+        width: 100%;
         object-fit: cover;
     }
 }
@@ -326,6 +334,7 @@
 
 .footer-section p {
     line-height: 1.5;
+    color: white;
 }
 
 .footer-section span {
@@ -341,6 +350,7 @@
 
 .footer-section span p {
     font-size: 15px;
+    color: white;
 }
 
 /* Footer Links */
@@ -382,12 +392,33 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .footer {
+        padding-block: 20px;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
+        margin-left: 0px;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .footer-line {
+        width: 100%;
+        margin: 0px;
     }
 
     .footer-section {
+        flex: 0;
         margin-bottom: 20px;
+    }
+
+    .footer-section span {
+        justify-content: center;
     }
 }
